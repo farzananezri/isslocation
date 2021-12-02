@@ -1,0 +1,32 @@
+<!-- <?php
+
+$data = file_get_contents("https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=");
+
+var_dump($data);
+?> -->
+<html>
+<body>
+
+<!-- if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $name = $_POST['fname'];
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo $name;
+    }
+}
+?> -->
+
+The ISS Location for current time <br>
+<!-- <?php echo $_POST["inputDate"]; ?><br> -->
+$data = file_get_contents("https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=inputDate");
+var_dump($data);
+
+The detail of the ISS Satelite
+$dataSatelite = file_get_contents("https://api.wheretheiss.at/v1/satellites/25544");
+var_dump($dataSatelite)
+
+
+</body>
+</html>
